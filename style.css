@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+.form blockquote {
+  margin: 20px 0 50px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid #0c9479;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-days ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.list-days ul li {
+  list-style: none;
+}
+
+.list-days ul li a {
+  padding: 5px 10px 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 5px;
+  font-weight: bold;
+  color: grey;
+}
+
+.list-days ul li a:hover,
+.active {
+  border-bottom: 3px solid #0c9479;
+  border-radius: 5px 4px 0 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-content h1 {
+  font-weight: 900px;
+  font-size: 4rem;
+  font-family: 'Montserrat Subrayada', sans-serif, cursive;
+  color: #212529;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.table-wrap {
+  background: white;
+  animation: scheduleOpen 1s ease;
+  display: none;
+  margin: 25px 0px;
+}
+
+.loader {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.form {
+  display: block;
+}
+
+.show-schedule {
+  display: flex;
+  align-self: center;
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid #ececec;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.table th {
+  padding: 15px 10px;
+  border: 1px solid #ececec;
+  background: #0c9479;
+  color: white;
+  font-weight: bold;
+}
+
+.table thead tr th:first-of-type p {
+  margin: 0;
+  display: inline-block;
+}
+
+.table td {
+  padding: 15px 20px;
+  text-align: center;
+  border: 1px solid #ececec;
+}
+
+.table td:first-of-type {
+  font-weight: bold;
+}
+
+.table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 3px solid #0c9479;
+}
+
+.cta-btn {
+  background-color: #0c9479;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  outline: none;
+  font-size: larger;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  display: block;
+}
+
+.print {
+  background-color: #0c9479;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 3px 5px 0px 5px;
+  margin: 3px;
+  font-size: larger;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+/* container style  */
+
+.difficulty {
+  display: flex;
+  flex-direction: column;
+}
+.difficulty label {
+  color: black;
+  font-weight: bold;
+}
+
+.difficulty .hard[type='radio']:checked + label:after {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+}
+.difficulty .hard[type='radio']:checked + label:before {
+  border-color: #b71c1c;
+}
+
+.difficulty .medium[type='radio']:checked + label:after {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+.difficulty .medium[type='radio']:checked + label:before {
+  border-color: #ff9800;
+}
+
+.difficulty .easy[type='radio']:checked + label:after {
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
+}
+.difficulty .easy[type='radio']:checked + label:before {
+  border-color: #ffeb3b;
+}
+
+/*Error style*/
+.error h2 {
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background-color: #f8d7da;
+  color: #881c59;
+  font-weight: 500px;
+  text-align: center;
+}
+.error {
+  display: none;
+  align-self: center;
+}
+
+/*Work Cell Style*/
+.cellWork td {
+  display: block;
+}
+
+.table #rest {
+  font-weight: bolder;
+  color: #b71c1c;
+}
+
+/*Animation Keyframes schedule*/
+@keyframes scheduleOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .loader h5 {
+    font-size: 35px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .table-wrap {
+    margin: 0 auto;
+    font-size: smaller;
+    width: fit-content;
+  }
+
+  .home-content {
+    margin: 0 auto;
+    font-size: smaller;
+  }
+  .list-days {
+    display: none;
+  }
+
+  .cta-btn {
+    display: none;
+  }
+}
+
+@media print {
+  .table-wrap .table th {
+    background-color: #0c9479 !important;
+    color: white !important ;
+    -webkit-print-color-adjust: exact;
+  }
+  .table tr:nth-of-type(even) {
+    background-color: #f3f3f3 !important;
+    -webkit-print-color-adjust: exact;
+  }
+}

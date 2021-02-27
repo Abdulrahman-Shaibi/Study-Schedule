@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet" />
+  <title>Study Schedule</title>
+</head>
+<body>
+  <div class="home-content">
+    <h1>Study Schedule</h1>
+  </div>
+
+  <div class="form container">
+    <!-- <form style="margin-bottom: 20px;">
+      <p>Select Appropriate time :</p>
+        <input type="radio" name="time" id="am">
+        <label for="am">AM</label>
+
+        <input type="radio" name="time" id="pm">
+        <label for="pm">PM</label>
+    </form> -->
+    <Blockquote>
+      Hello Visitor, Welcome To Study Schedule 👋... <br>
+      1 - Please Fill Entries to Process Schedule Table. <br>
+      2 - you can customize your Study Schedule to suit you desire. <br>
+      3 - Print Your Table and Hang it Enjoy!. <br>
+    </Blockquote>
+    <form style="margin-bottom: 20px;">
+      <p>Employed or not :</p>
+        <input type="radio" name="status" id="employed">
+        <label class="1" for="employed">Yes</label>
+
+        <input type="radio" name="status" id="notEmployed">
+        <label class="2" for="notEmployed">No</label>
+    </form>
+
+   <form id="form1">
+      <div class="difficulty">
+        <div class="input-field">
+          <input id="subject1" type="text">
+          <label for="users">Subject 1</label>
+        </div>
+        <!-- <input class="hard" type="radio" name="diff" id="hard">
+          <label for="hard">Hard</label>
+
+        <input class="medium" type="radio" name="diff" id="medium">
+          <label for="medium">Medium</label>
+          
+        <input class="easy" type="radio" name="diff" id="easy">
+          <label for="easy">Easy</label>       -->
+      </div>
+   </form>
+   <form id="form2">
+    <div class="difficulty">
+      <div class="input-field">
+        <input id="subject2" type="text">
+        <label for="users">Subject 2</label>
+      </div>  
+    </div>
+    <form id="form3">
+      <div class="difficulty">
+        <div class="input-field">
+          <input id="subject3" type="text">
+          <label for="users">Subject 3</label>
+        </div>  
+      </div>
+      <form id="form4">
+        <div class="difficulty">
+          <div class="input-field">
+            <input id="subject4" type="text">
+            <label for="users">Subject 4</label>
+          </div>  
+        </div>
+        <form id="form5">
+          <div class="difficulty">
+            <div class="input-field">
+              <input id="subject5" type="text">
+              <label for="users">Subject 5</label>
+            </div>  
+          </div>
+
+  </div>
+  <button type="submit" class="cta-btn waves-effect waves-light" id="open">Submit</button>
+
+  <div class="error" id="error">
+    <h2>Please Fill All Entries...</h2>
+  </div>
+
+  <div id="loader" class="loader">
+    <img src="./img/loading img.gif" style="width: 60px;" alt="Loading..." >
+    <h5 style="font-family: 'open sans', sans-serif; color: #212529;">Please Wait Your Schedule is Processing</h5>
+  </div>
+  
+  <div class="table-wrap">
+    <table class="table" id="table">
+      <thead>
+        <tr>
+        <th>Days <span> &</span><p> Time</p> </th> 
+        <th>8:00 AM - 3:00 PM</th>        
+        <th>4:00 PM</th>        
+        <th>5:00 PM</th>        
+        <th>6:00 PM</th>        
+        <th>7:00 PM</th>                
+        <th>8:00 PM</th>                
+        <th>9:00 PM</th>                
+        <th>10:00 PM</th>                
+        <th>11:00 PM</th>                
+        <th>12:00 AM</th>                               
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sun</td>
+          <td class="cellWork"></td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="rest">Rest Time</td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="sun"></td>
+          <td class="editCell" id="sun"></td>
+        </tr>
+        <tr>
+          <td>Mon</td>
+          <td class="cellWork"></td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="rest">Rest Time</td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="mon"></td>
+          <td class="editCell" id="mon"></td>
+        </tr>
+        <tr>
+          <td>Tue</td>
+          <td class="cellWork"></td>
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="rest">Rest Time</td>         
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="tue"></td>         
+          <td class="editCell" id="tue"></td>         
+        </tr>
+        <tr>
+          <td>Wed</td>
+          <td class="cellWork"></td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="rest">Rest Time</td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="wed"></td>
+          <td class="editCell" id="wed"></td>
+        </tr>
+        <tr>
+          <td>Thu</td>
+          <td class="cellWork"></td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="rest">Rest Time</td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="thu"></td>
+          <td class="editCell" id="thu"></td>
+        </tr>
+      </tbody>
+  </table>
+  </div>
+
+<div class="print">
+  <button type="button" class="print waves-effect waves-light" id="print"><img src="/img/print-icon.svg" alt="Print Icon"></button>
+</div>
+
+  <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" integrity="sha512-IcKq5DomZY4Gw+wmbDALeSPnNPYEwcv3dXdolW2TEoUVXQoCvj22GGilLfpZroglJgldOK8DAGcwNDsrtvv0zA==" crossorigin="anonymous"></script>
+</body>
+</html>
